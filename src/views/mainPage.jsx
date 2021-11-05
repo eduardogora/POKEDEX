@@ -24,6 +24,7 @@ class Mainpage extends Component {
         activePokemonUrl: "",
     }
 
+    //Handle page change
     onPageChange = async (page, pageSize) => {
         await this.setState({
           currentPage: page,
@@ -32,9 +33,11 @@ class Mainpage extends Component {
         await this.getPokemonsToShow();
     }
 
+    //Makes the pagination change of rendered pokemons
     onShowSizeChange = async (page, pageSize) =>{
     }
 
+    //Get the information of all pokemon
     getAllPokemon = async () => {
         const params = new URLSearchParams([["limit", 1118]]);
         await axios
@@ -50,6 +53,7 @@ class Mainpage extends Component {
         this.getPokemonsToShow();
     }
 
+    //Get rendered pokemons
     getPokemonsToShow =  async() => {
          let initialPokemon = (this.state.currentPage - 1) * this.state.pageSize;
          let lastPokemon = initialPokemon + this.state.pageSize;
@@ -87,19 +91,23 @@ class Mainpage extends Component {
          await this.setState({initialPokemon, lastPokemon, renderedPokemon: filtered, statePokemons: newPokemon, currentPage });
     }
 
+    //Allow the search method to work
     onSearch = async (value) => {
         await this.setState({pokemonSearch: value.target.value})
         await this.getPokemonsToShow();
     }
 
+    //Handle pokemon click
     onPokemonClick = async(pokemon, url) =>{
         await this.setState({activePokemon: pokemon, activePokemonUrl: url, pokemonPageActive: true});
     }
 
+    //Handle home click button
     handleHomeClick = () =>{
         this.setState({pokemonPageActive: false})
     }
 
+    //Changes active pokemon to the next one
     nextPokemon = async(name) =>{
         let index = 0;
         for(let i = 0; i < this.state.statePokemons.length; i++){
@@ -115,6 +123,7 @@ class Mainpage extends Component {
         await this.setState({activePokemon: this.state.statePokemons[index].name, activePokemonUrl: this.state.statePokemons[index].url,});
     }
 
+    //Change active pokemon to the previous one 
     previousPokemon = async(name) =>{
         let index = 0;
         for(let i = 0; i < this.state.statePokemons.length; i++){
@@ -130,6 +139,7 @@ class Mainpage extends Component {
         await this.setState({activePokemon: this.state.statePokemons[index].name, activePokemonUrl: this.state.statePokemons[index].url,});
     }
 
+    //Obtain the card color
     getCardColor = (name) => {
         let color = "";
 

@@ -25,7 +25,8 @@ class PokemonPage extends Component {
         cardColor: "",
       };
 
-      getPokemonInfo = async () => {
+      //Obtain the specific pokemon info
+    getPokemonInfo = async () => {
         await axios
         .get( this.props.url)
         .then((res) => {
@@ -44,6 +45,7 @@ class PokemonPage extends Component {
       });
     }
     
+    //Obtain the stats of an specific pokemon
     getStatValue = (name, value) =>{
         let exit = 0;
         switch(name){
@@ -71,6 +73,7 @@ class PokemonPage extends Component {
         return exit;
     }
 
+    //Obtain the type color
     getTypeColor = (name) => {
         let color = "";
 
@@ -141,6 +144,7 @@ class PokemonPage extends Component {
         await this.setState({cardColor});
       }
     
+      //change the page
       onChange = page => {
         this.setState({
           current: page,

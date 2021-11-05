@@ -16,6 +16,7 @@ class PokemonCard extends Component {
         cardColor: "",
       };
 
+      //Obtain specific pokemon information
       getPokemonInfo = async () => {
         await axios
         .get( this.props.url)
@@ -29,13 +30,15 @@ class PokemonCard extends Component {
       async componentDidMount(){
         await this.getPokemonInfo();
       }
-    
+
+      //Handle page change
       onChange = page => {
         this.setState({
           current: page,
         });
       };
 
+      //Handle pokemon click
       handlePokemonClick = async () =>{
         await this.props.onPokemonClick(this.state.name, this.state.url);
       }
