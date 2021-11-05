@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import { NavLink, withRouter, Link } from "react-router-dom";
-import { Card, Row, Col } from 'antd';
+import { Card, } from 'antd';
 
 import axios from "axios";
 

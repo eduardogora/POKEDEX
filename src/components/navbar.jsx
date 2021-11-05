@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Menu, Input } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 
-const { SubMenu } = Menu;
 const { Search } = Input;
 
 class Navbar extends Component {

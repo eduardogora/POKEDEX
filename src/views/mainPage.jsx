@@ -4,9 +4,8 @@ import PokemonPage from "./pokemonPage";
 import axios from "axios";
 
 import React, { Component } from "react";
-import { Menu, Pagination, Row, Col } from 'antd';
+import { Pagination, Row, Col, Empty } from 'antd';
 
-const { SubMenu } = Menu;
 
 class Mainpage extends Component {
     state = {
@@ -206,11 +205,10 @@ class Mainpage extends Component {
 
   render() {
     return (
-        <div>
-        
+        <div >
         {!this.state.pokemonPageActive 
             ? 
-            <div>
+            <div >
                 <Navbar
                     onSearch = {this.onSearch}
                     getPokemonsToShow = {this.getPokemonsToShow}
@@ -231,6 +229,12 @@ class Mainpage extends Component {
                         </Col>
                     ))}
                 </Row>
+                {this.state.renderedPokemon.length === 0
+                ?
+                <Empty style={{backgroundColor: "#3B4CCA"}}></Empty>
+                :
+                null
+                }
                 <Pagination 
                 style={{padding: "20px", backgroundColor: "#3B4CCA"}}
                 current={this.state.currentPage} 
