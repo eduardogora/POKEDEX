@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/POKEDEX/static/css/main.a617e044.chunk.css",
+    "main.js": "/POKEDEX/static/js/main.dbd84b02.chunk.js",
+    "main.js.map": "/POKEDEX/static/js/main.dbd84b02.chunk.js.map",
+    "runtime-main.js": "/POKEDEX/static/js/runtime-main.0f7da0c8.js",
+    "runtime-main.js.map": "/POKEDEX/static/js/runtime-main.0f7da0c8.js.map",
+    "static/css/2.a95be28f.chunk.css": "/POKEDEX/static/css/2.a95be28f.chunk.css",
+    "static/js/2.2ab19d0e.chunk.js": "/POKEDEX/static/js/2.2ab19d0e.chunk.js",
+    "static/js/2.2ab19d0e.chunk.js.map": "/POKEDEX/static/js/2.2ab19d0e.chunk.js.map",
+    "static/js/3.fc076cb4.chunk.js": "/POKEDEX/static/js/3.fc076cb4.chunk.js",
+    "static/js/3.fc076cb4.chunk.js.map": "/POKEDEX/static/js/3.fc076cb4.chunk.js.map",
+    "index.html": "/POKEDEX/index.html",
+    "static/css/2.a95be28f.chunk.css.map": "/POKEDEX/static/css/2.a95be28f.chunk.css.map",
+    "static/css/main.a617e044.chunk.css.map": "/POKEDEX/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.2ab19d0e.chunk.js.LICENSE.txt": "/POKEDEX/static/js/2.2ab19d0e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/POKEDEX/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f7da0c8.js",
+    "static/css/2.a95be28f.chunk.css",
+    "static/js/2.2ab19d0e.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.dbd84b02.chunk.js"
+  ]
+}
